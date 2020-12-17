@@ -37,14 +37,15 @@ ax.quiver(0, -1, 0, 0,3, 0, color='grey',linestyle='dashed')
 ax.quiver(0, 0, -1, 0, 0, 3, color='grey',linestyle='dashed')
 
 # Vector before rotation
-ax.quiver(0, VFOV/2, 0, HFOV/2, 0, 0, color='red')
-ax.quiver(0, VFOV/2, 0, -HFOV/2, 0, 0, color='red')
-ax.quiver(-HFOV/2, 0, 0, 0, VFOV/2, 0, color='blue')
-ax.quiver(-HFOV/2, 0, 0, 0, -VFOV/2, 0, color='blue')
-ax.quiver(HFOV/2, 0, 0, 0, VFOV/2, 0, color='blue')
-ax.quiver(HFOV/2, 0, 0, 0, -VFOV/2, 0, color='blue')
-ax.quiver(0, -VFOV/2, 0, HFOV/2, 0, 0, color='red')
-ax.quiver(0, -VFOV/2, 0, -HFOV/2, 0, 0, color='red')
+ax.quiver(0, VFOV/2, -altitude, HFOV/2, 0, 0, color='red')
+ax.quiver(0, VFOV/2, -altitude, -HFOV/2, 0, 0, color='red')
+ax.quiver(-HFOV/2, 0, -altitude, 0, VFOV/2, 0, color='blue')
+ax.quiver(-HFOV/2, 0, -altitude, 0, -VFOV/2, 0, color='blue')
+ax.quiver(HFOV/2, 0, -altitude, 0, VFOV/2, 0, color='blue')
+ax.quiver(HFOV/2, 0, -altitude, 0, -VFOV/2, 0, color='blue')
+ax.quiver(0, -VFOV/2, -altitude, HFOV/2, 0, 0, color='red')
+ax.quiver(0, -VFOV/2, -altitude, -HFOV/2, 0, 0, color='red')
+ax.quiver(-HFOV/2, -VFOV/2, -altitude, HFOV, VFOV, 0, color='yellow',linestyle='dashed') #Diagnol
 
 
 
@@ -54,5 +55,5 @@ ax.quiver(0, -VFOV/2, 0, -HFOV/2, 0, 0, color='red')
 
 ax.set_xlim([-150, 150])
 ax.set_ylim([-150, 150])
-ax.set_zlim([-150, 150])
+ax.set_zlim([-altitude, 0])
 plt.show()
